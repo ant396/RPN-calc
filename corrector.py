@@ -51,9 +51,10 @@ class Amend(object):
 
     def helperForRPM(self):
         #This func helps RPN solve issues with below operators
-        self.inputExpr = self.inputExpr.replace("//", r"`")
-        self.inputExpr = self.inputExpr.replace("log10", r"logt")
-        self.inputExpr = self.inputExpr.replace("atan2", r"atant")
+        self.inputExpr = self.inputExpr.replace("//", "`")
+        self.inputExpr = self.inputExpr.replace("log10", "logt")
+        self.inputExpr = self.inputExpr.replace("atan2", "atant")
+        self.inputExpr = self.inputExpr.replace("**", "^")
         return self.inputExpr
 
     def bracketsAndMult(self):
